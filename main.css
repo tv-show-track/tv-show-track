@@ -4,7 +4,7 @@ body {
   color: white;
   height: 100vh;
   background-color: #232c39;
-  font-family: Arial, Helvetica, Helvetica Neue, serif;
+  font-family: 'Montserrat', serif;
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
@@ -14,6 +14,7 @@ body {
 
 h1 {
   position: relative;
+  font-family: Arial, Helvetica, Helvetica Neue, serif;
   font-size: 5em;
   font-weight: 100;
   letter-spacing: -0.1em;
@@ -39,7 +40,31 @@ h1::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 200px;
+  text-align: center;
+}
+
+.title p {
+  margin: 40px 20px 20px 20px;
+  font-size: 1.3em;
+  text-align: left;
+  width: 700px;
+}
+
+/*.title .current-player {
+  color: #43CBFF;
+}*/
+
+.title strong {
+  color: #43CBFF;
+}
+
+.title .compatibility {
+  display: flex;
+}
+
+.title .compatibility .player {
+  min-width: 100px;
+  margin: 0 20px;
 }
 
 h2 {
@@ -49,4 +74,72 @@ h2 {
 section {
   text-align: center;
   font-size: 1em;
+}
+
+section.download {
+  margin-bottom: 60px;
+}
+
+section.contact {
+  font-size: 0.8em;
+}
+
+.animated, .animated img {
+  display: inline-block;
+}
+
+.animated img {
+  vertical-align: bottom;
+  height: 30px;
+  margin-left: 4px;
+}
+
+.macbook {
+  background: url(./images/macbook.png) no-repeat;
+  background-size: 100%;
+  width: 678px;
+  height: 398px;
+  margin: 40px auto 20px;
+  position: relative;
+}
+
+.macbook .glare {
+  background: url(./images/glare.png) no-repeat;
+  background-size: inherit;
+  width: 227px;
+  height: 321px;
+  position: absolute;
+  right: 75px;
+  top: 3px;
+  z-index: 1;
+}
+
+.macbook .monitor {
+  position: absolute;
+  top: 23px;
+  left: 91px;
+  background-size: inherit;
+  width: 496px;
+  height: 310px;
+  background-image: url(./images/tv-show-track.gif);
+}
+
+@media (max-width: 620px) {
+  .macbook {
+    width: 280px;
+    height: 175px;
+  }
+
+  .macbook .glare {
+    width: 90px;
+    right: 31px;
+    top: 1px;
+  }
+
+  .macbook .monitor {
+    top: 10px;
+    left: 38px;
+    width: 205px;
+    height: 128px;
+  }
 }

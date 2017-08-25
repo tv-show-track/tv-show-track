@@ -25,9 +25,5 @@ function changeCurrentPlayer() {
     currentIdx = 0
   }
 
-  currentPlayerElem.innerHTML = `
-  <div class="animated fadeInDown">
-    <img src="${ players[currentIdx].image }" />
-    ${ players[currentIdx].title }
-  </div>`
+  currentPlayerElem.innerHTML = '<div class="animated fadeInDown"><img src='+ players[currentIdx].image +' />'+ players[currentIdx].title +'</div>'
 }
